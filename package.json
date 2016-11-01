@@ -3,8 +3,13 @@
     "version": "0.0.0",
     "description": "Angular JS snippet codes for Atom text editor",
     "engines": {
-        "atom": ">=1.0.0"
+        "atom": ">=1.0.0 <2.0.0"
     },
+    "keywords": [
+        "angularjs",
+        "angular",
+        "snippets"
+    ],
         "main": "./lib/index",
         "dependencies": {},
         "repository": {
