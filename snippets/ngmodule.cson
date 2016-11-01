@@ -1,0 +1,20 @@
+'.source.js':
+    'ngModule':
+        'prefix': 'ngmodule'
+        'body': """
+            // Closure
+            (function() {
+                'use strict';
+
+
+                // Module
+                angular
+                    .module('${1:module}', [
+                        '${2:dependencies}'
+                    ]);
+
+
+            })();
+        """
+        'description': 'Angular module definition'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

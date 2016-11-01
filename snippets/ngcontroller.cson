@@ -1,0 +1,46 @@
+'.source.js':
+    'ngController':
+        'prefix': 'ngcontroller'
+        'body': """
+            // Closure
+            (function() {
+                'use strict';
+
+
+                // Module
+                angular
+                    .module('${1:module}')
+                    .controller('${2:Controller}', ${2:Controller});
+
+
+                // Dependancy injection
+                ${2:Controller}.$inject = [${3:dependencies}];
+
+
+                // Controller implementation
+                function ${2:Controller}(${3:dependencies}) {
+
+                    // controller reference
+                    var vm = this;
+
+                    // private members (objects, variables)
+
+                    // public members (bindable to the view)
+
+                    // activate logic
+                    activate();
+
+
+                    ////////
+
+                    function activate() {
+                        /* - */
+                    }
+
+                }
+
+
+            })();
+        """
+        'description': 'Angular controller definition'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

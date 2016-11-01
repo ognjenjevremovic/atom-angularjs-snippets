@@ -1,0 +1,36 @@
+'.source.js':
+    'ngFilter':
+        'prefix': 'ngfilter'
+        'body': """
+            // Closure
+            (function() {
+                'use strict';
+
+
+                // Module
+                angular
+                    .module('${1:module}')
+                    .filter('${2:filter}', ${2:filter});
+
+
+                // Filter implementation
+                function ${2:filter}() {
+
+                    // return the filter
+                    return ${2:filter}Filter
+
+                    // filter function
+                    function ${2:filter}Filter(${3:params}) {
+
+                        // return value from a filter
+                        return ${3:params};
+
+                    }
+
+                }
+
+
+            })();
+        """
+        'description': 'Angular filter service definition'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

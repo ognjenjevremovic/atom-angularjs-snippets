@@ -1,0 +1,48 @@
+'.source.js':
+    'ngFactory':
+        'prefix': 'ngfactory'
+        'body': """
+            // Closure
+            (function() {
+                'use strict';
+
+
+                // Module
+                angular
+                    .module('${1:module}')
+                    .factory('${2:factory}', ${2:factory});
+
+
+                // Dependancy injection
+                ${2:factory}.$inject = ['${3:dependencies}'];
+
+
+                // Factory implementation
+                function ${2:factory}(${3:dependencies}) {
+
+                    // private members (variables and objects)
+
+                    // public members (variables and objects)
+
+                    // Define the service object (with public members)
+                    var service = {
+                        ${4:function}: ${4:function}
+                    };
+
+                    // Return the service object
+                    return service;
+
+
+                    ////////
+
+                    function ${4:function}() {
+                        /* - */
+                    }
+
+                }
+
+
+            })();
+        """
+        'description': 'Angular factory (service) definition'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

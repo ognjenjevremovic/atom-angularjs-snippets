@@ -1,0 +1,47 @@
+'.source.js':
+    'ngDirective':
+        'prefix': 'ngdirective'
+        'body': """
+            // Closure
+            (function() {
+                'use strict';
+
+
+                // Module
+                angular
+                    .module('${1:module}')
+                    .directive('${2:directive}', ${2:directive});
+
+
+                // Directive implementation
+                function ${2:directive}() {
+
+                    // Define the directive object
+                    var directive = {
+                        restrict: '${3:EA}',
+                        templateUrl: '${4:templateUrl}',
+                        scope: {
+                        },
+                        link: linkFunc,
+                        controller: ${5:Controller},
+                        controllerAs: '${6:vm}',
+                        bindToController: true
+                    };
+
+                    // Return the directive object
+                    return directive;
+
+
+                    ////////
+
+                    function linkFunc(scope, el, attr, ctrl) {
+                        /* - */
+                    }
+
+                }
+
+
+            })();
+        """
+        'description': 'Angular directive definition'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'
