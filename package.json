@@ -1,28 +1,26 @@
 {
   "name": "atom-angularjs-snippets",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Angular JS snippet codes for Atom text editor",
+  "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "keywords": [
-    "angularjs",
-    "angular",
-    "snippets"
-  ],
-  "main": "./lib/index",
-  "dependencies": {},
+  "homepage": "https://github.com/ognjenjevremovic/atom-angularjs-snippets#README.md",
+  "bugs": {
+    "url": "https://github.com/ognjenjevremovic/atom-angularjs-snippets/issues",
+    "email" : "ognjen.jevremovic@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ognjenjevremovic/atom-angularjs-snippets.git"
   },
-  "homepage": "https://github.com/ognjenjevremovic/atom-angularjs-snippets#README.md",
-  "bugs": {
-    "url": "https://github.com/ognjenjevremovic/atom-angularjs-snippets/issues"
-  },
-  "author": {
-    "name": "Ognjen Jevremović",
-    "github": "https://github.com/ognjenjevremovic"
-  },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "./lib/index",
+  "dependencies": {},
+  "keywords": [
+    "angularjs",
+    "angular",
+    "snippets"
+  ]
 }

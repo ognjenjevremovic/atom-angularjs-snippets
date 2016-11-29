@@ -1,37 +1,29 @@
 '.source.js':
     'ngService':
-        'prefix': 'ngservice'
+        'prefix': 'ng-service'
         'body': """
-            // Closure
             (function() {
                 'use strict';
 
 
-                // Module
+                //  Module
                 angular
                     .module('${1:module}')
                     .service('${2:Service}', ${2:Service});
 
 
-                // Dependancy injection
+                //  Service
                 ${2:Service}.$inject = ['${3:dependencies}'];
-
-
-                // Service implementation
                 function ${2:Service}(${3:dependencies}) {
 
-                    // public members
                     this.${4:function} = ${4:function};
-
 
                     ////////
 
                     function ${4:function}() {
                         /* - */
                     }
-
                 }
-
 
             })();
         """

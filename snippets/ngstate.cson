@@ -1,0 +1,21 @@
+'.source.js':
+    'ngState':
+        'prefix': 'ng-state'
+        'body': """
+            // ${1:state} state ['/${1:state}']
+            {
+                state   : '${1:state}',
+                config  : {
+                    title       : '${1:state}',
+                    url         : '/${1:url}',
+                    templateUrl : 'app/${1:state}/${1:state}.html',
+                    controller  : '${1:state}Controller',
+                    controllerAs: '${1:state}',
+                    params: {
+                        ${2:param}: ${3:value}
+                    }
+                }
+            }
+        """
+        'description': 'Angular state object'
+        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

@@ -1,34 +1,29 @@
 '.source.js':
     'ngFilter':
-        'prefix': 'ngfilter'
+        'prefix': 'ng-filter'
         'body': """
-            // Closure
             (function() {
                 'use strict';
 
 
-                // Module
+                //  Module
                 angular
                     .module('${1:module}')
                     .filter('${2:filter}', ${2:filter});
 
 
-                // Filter implementation
+                //  ${2:filter} filter
                 function ${2:filter}() {
-
-                    // return the filter
                     return ${2:filter}Filter
 
-                    // filter function
+                    ////////
+
                     function ${2:filter}Filter(${3:params}) {
 
-                        // return value from a filter
+                        ////////
                         return ${3:params};
-
                     }
-
                 }
-
 
             })();
         """

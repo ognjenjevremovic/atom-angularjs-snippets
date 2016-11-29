@@ -1,78 +1,49 @@
 '.source.js':
     'ngRoute':
-        'prefix': 'ngroute'
+        'prefix': 'ng-route'
         'body': """
-            // Closure
             (function() {
                 'use strict';
 
 
-                // Module
+                //  Module
                 angular
                     .module('${1:module}')
                     .run(appRun);
 
-
-                // Dependancy injection
-                appRun.$inject = ['routerHelper'];
-
-
-                // Run block
+                appRun.$inject =    ['routerHelper'];
                 function appRun(routerHelper) {
 
-                    // configure application (module) states
+                    //  configure states
                     routerHelper.configureStates(getStates());
-
                 }
 
 
-                // Retrieve states for the application
+                //  Retrieve states
                 function getStates() {
-
-                    // return the application states
-                    return [
-
-                        // state : '${2:state}'
+                    var states = [
+                        // ${2:state} state ['/${2:state}']
                         {
-                            state: '${2:state}',
-                            config: {
-                                url: '/${2:state}',
-                                templateUrl: 'app/${2:state}/${2:state}.html',
-                                controller: '${2:State}Controller',
+                            state   : '${2:state}',
+                            config  : {
+                                title       : '${2:state}',
+                                url         : '/${2:state}',
+                                templateUrl : 'app/${2:state}/${2:state}.html',
+                                controller  : '${2:state}Controller',
                                 controllerAs: '${2:state}',
-                                title: '${2:state}',
-                                params: {
-                                    ${3:param}: ${4:value}
+                                params      : {
+                                    ${3:param}  : ${4:value}
                                 }
                             }
                         }
-
                     ];
 
-                }
+                    ////////
 
+                    return states;
+                }
 
             })();
         """
         'description': 'Angular module states configuration'
-        'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'
-    'ngState':
-        'prefix': 'ngstate'
-        'body': """
-            // state : '${1:state}'
-            {
-                state: '${1:state}',
-                config: {
-                    url: '/',
-                    templateUrl: 'app/${1:state}/${1:state}.html',
-                    controller: '${1:State}Controller',
-                    controllerAs: '${1:state}',
-                    title: '${1:state}',
-                    params: {
-                        ${2:param}: ${3:value}
-                    }
-                }
-            }
-        """
-        'description': 'Angular state object'
         'rightLabelHTML': '<span style="color:#F0DA50; font-weight: bold;">AngularJS</span>'

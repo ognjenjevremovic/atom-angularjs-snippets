@@ -1,18 +1,16 @@
 '.source.js':
     'ngModule':
-        'prefix': 'ngmodule'
+        'prefix': 'ng-module'
         'body': """
-            // Closure
             (function() {
                 'use strict';
 
 
-                // Module
+                //  Module
                 angular
                     .module('${1:module}', [
                         '${2:dependencies}'
                     ]);
-
 
             })();
         """

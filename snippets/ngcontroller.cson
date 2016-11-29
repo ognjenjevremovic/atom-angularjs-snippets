@@ -1,44 +1,30 @@
 '.source.js':
     'ngController':
-        'prefix': 'ngcontroller'
+        'prefix': 'ng-controller'
         'body': """
-            // Closure
             (function() {
                 'use strict';
 
 
-                // Module
+                //  Module
                 angular
                     .module('${1:module}')
                     .controller('${2:Controller}', ${2:Controller});
 
-
-                // Dependancy injection
-                ${2:Controller}.$inject = [${3:dependencies}];
-
-
-                // Controller implementation
+                //  ${2:Controller} Controller
+                ${2:Controller}.$inject =   [${3:dependencies}];
                 function ${2:Controller}(${3:dependencies}) {
+                    var vm  =  this;
 
-                    // controller reference
-                    var vm = this;
-
-                    // private members (objects, variables)
-
-                    // public members (bindable to the view)
-
-                    // activate logic
+                    //  activate logic
                     activate();
-
 
                     ////////
 
                     function activate() {
                         /* - */
                     }
-
                 }
-
 
             })();
         """
